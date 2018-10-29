@@ -1,0 +1,6 @@
+termgraph data/ex4.dat --color {blue,red}
+termgraph data/ex7.dat --color {yellow,magenta} --stacked --title "Stacked Data"
+termgraph --calendar --start-dt 2017-07-01 data/cal.dat
+echo "Label,3,9,1" | termgraph --custom-tick "😀" --no-label
+termgraph data/ex1.dat --custom-tick "🏃" --width 20 --title "Running Data"
+termgraph data/ex1.dat
