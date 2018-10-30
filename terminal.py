@@ -1,24 +1,18 @@
 import os
 import sys
-from smdata.smtp import sendsmpt
-
-
-
-v = sys.argv[1:]
-core = ["sendsmpt", "cherry"]
+from webmail.edata import edata
 
 
 def main():
-    print("this is terminal ")
-    if v[0] in core:
-        for x in core:
-            if x == v[0]:
-                print(x)
-                break
-        return sendsmpt.sendsm()
+    v = sys.argv
 
+    if len(v) == 2 and v[1] == "sendsm":
+        return edata.sendsm()
+
+    elif len(v) == 2 and v[1] == "imapsm":
+        return edata.imapsm()
     else:
-        print("no server")
+        pass
 
 
 if __name__ == "__main__":

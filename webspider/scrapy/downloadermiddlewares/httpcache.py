@@ -1,4 +1,4 @@
-from smdata.utils import formatdate
+from webmail.utils import formatdate
 from twisted.internet import defer
 from twisted.internet.error import TimeoutError, DNSLookupError, \
         ConnectionRefusedError, ConnectionDone, ConnectError, \

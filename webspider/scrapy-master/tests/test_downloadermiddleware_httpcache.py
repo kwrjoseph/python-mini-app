@@ -3,7 +3,7 @@ import time
 import tempfile
 import shutil
 import unittest
-import smdata.utils
+import webmail.utils
 from contextlib import contextmanager
 import pytest
 
@@ -21,9 +21,9 @@ class _BaseTest(unittest.TestCase):
     policy_class = 'scrapy.extensions.httpcache.RFC2616Policy'
 
     def setUp(self):
-        self.yesterday = smdata.utils.formatdate(time.time() - 86400)
-        self.today = smdata.utils.formatdate()
-        self.tomorrow = smdata.utils.formatdate(time.time() + 86400)
+        self.yesterday = webmail.utils.formatdate(time.time() - 86400)
+        self.today = webmail.utils.formatdate()
+        self.tomorrow = webmail.utils.formatdate(time.time() + 86400)
         self.crawler = get_crawler(Spider)
         self.spider = self.crawler._create_spider('example.com')
         self.tmpdir = tempfile.mkdtemp()

@@ -2,7 +2,7 @@
 
 import unittest
 from io import BytesIO
-from smdata.charset import Charset
+from webmail.charset import Charset
 
 from scrapy.mail import MailSender
 

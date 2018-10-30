@@ -6,7 +6,7 @@ from six.moves import cPickle as pickle
 from importlib import import_module
 from time import time
 from weakref import WeakKeyDictionary
-from smdata.utils import mktime_tz, parsedate_tz
+from webmail.utils import mktime_tz, parsedate_tz
 from w3lib.http import headers_raw_to_dict, headers_dict_to_raw
 from scrapy.http import Headers, Response
 from scrapy.responsetypes import responsetypes

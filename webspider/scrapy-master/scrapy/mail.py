@@ -11,16 +11,16 @@ except ImportError:
     from io import BytesIO
 import six
 
-from smdata.utils import COMMASPACE, formatdate
+from webmail.utils import COMMASPACE, formatdate
 from six.moves.email_mime_multipart import MIMEMultipart
 from six.moves.email_mime_text import MIMEText
 from six.moves.email_mime_base import MIMEBase
 if six.PY2:
-    from smdata.MIMENonMultipart import MIMENonMultipart
-    from smdata import Encoders
+    from webmail.MIMENonMultipart import MIMENonMultipart
+    from webmail import Encoders
 else:
-    from smdata.mime.nonmultipart import MIMENonMultipart
-    from smdata import encoders as Encoders
+    from webmail.mime.nonmultipart import MIMENonMultipart
+    from webmail import encoders as Encoders
 
 from twisted.internet import defer, reactor, ssl
 

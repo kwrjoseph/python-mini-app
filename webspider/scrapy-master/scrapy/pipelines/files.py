@@ -9,7 +9,7 @@ import os
 import os.path
 import time
 import logging
-from smdata.utils import parsedate_tz, mktime_tz
+from webmail.utils import parsedate_tz, mktime_tz
 from six.moves.urllib.parse import urlparse
 from collections import defaultdict
 import six
