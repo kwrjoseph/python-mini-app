@@ -1,16 +1,21 @@
 import os
 import sys
-from webmail.edata import edata
+from comms.edata import edata
+from comms.send_sms import smsdata
 
 
 def main():
-    v = sys.argv
+    targ = sys.argv
 
-    if len(v) == 2 and v[1] == "sendsm":
+    if len(targ) == 2 and targ[1] == "smtp":
         return edata.sendsm()
 
-    elif len(v) == 2 and v[1] == "imapsm":
+    elif len(targ) == 2 and targ[1] == "imap":
         return edata.imapsm()
+
+    elif len(targ) == 2 and targ[1] == "sms":
+        return smsdata.send()
+
     else:
         pass
 

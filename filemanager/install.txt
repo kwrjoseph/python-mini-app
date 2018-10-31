@@ -1,0 +1,31 @@
+lfm is very easy to install, select one of these options.
+
+First, check if your OS include lfm in their repositories. Type as root:
+
+# dnf install lfm       # fedora/redhat/centos/…
+
+# pacman -S lfm         # archlinux
+
+# apt-get install lfm   # debian/ubuntu/mint/…
+
+NOTE 1: be sure to install lfm version 3 or higher, not old version 2.3!
+
+NOTE 2: lfm is not usually included in main distributions repositories.
+
+Using pip:
+
+$ pip install lfm
+
+To install from sources:
+
+Download sources
+Uncompress file: $ tar xvfz lfm-3.1.tar.gz
+Enter the directory and build: $ python setup.py build
+Install, as root: # python setup.py install
+WARNING: Remember lfm 3.x requires Python 3.4+. If you have installed both python 2.x and 3.x versions on your system, change python with python3 and pip with pip3 above.
+
+Now to run it:
+$ lfm
+and to change default settings:
+General Menu [F9] -> Edit Configuration [c]
+To let lfm to change to panel's current directory after quiting with q or F10 keys, you must add next code to /etc/bashrc or to your ~/.bashrc:
